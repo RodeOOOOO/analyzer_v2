@@ -3,10 +3,10 @@ import time
 import logging
 from smbus2 import SMBus
 from pump import run_sequence
-from config import PUMP_CONFIG
+#from config import PUMP_CONFIG
 
 # Initialize logging
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 # GPIO setup
@@ -96,7 +96,8 @@ def test_pin_32():
     logger.debug("Setting Pin 32 to HIGH")
     GPIO.output(gpio_pin_2, GPIO.HIGH)
     time.sleep(2)
-
+    
+'''
 def test_valve_mode(valve_mode_function):
     """Test valve control along with pump operation."""
     try:
@@ -113,7 +114,7 @@ def test_valve_mode(valve_mode_function):
 
     except Exception as e:
         logger.error(f"Error during valve mode test: {e}")
-        
+'''      
 
 def main():
     """Main entry point for valve control testing."""
