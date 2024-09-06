@@ -1,12 +1,17 @@
 import time
 import threading
 import logging
-from config import PROCESS_CONFIG  # Import the process-specific configuration
+from config import PROCESS_CONFIG # Import the process-specific configuration
 from valve import control_valve_mode  # Import the valve control function
+from vna import run_vna_sweep  # Import the VNA sweep function
 
 # Initialize logging
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+flush_finish_flag = threading.Event()
+homogenization_finish_flag = threading.Event()
+sample_finish_flag = threading.Event()
 
 def flush_process(shared_data, flow_lock, finish_flag):
     """Perform the flush process."""
@@ -34,8 +39,8 @@ def homogenization_process(shared_data, flow_lock, finish_flag):
     finish_flag.set()
     logger.debug("Homogenization process completed.")
 
-def sample_process(shared_data, flow_lock, finish_flag):
-    """Perform the sampling process."""
+def sample_process(shared_data, flow_lock, finish_flag, concentration, chemical):
+    """Perform the sampling process with VNA sweep."""
     with flow_lock:
         shared_data["target_flow"] = PROCESS_CONFIG['sample_rate']
         shared_data["valve_mode"] = "sample_flow"
@@ -43,10 +48,10 @@ def sample_process(shared_data, flow_lock, finish_flag):
     logger.debug("Starting sampling process...")
     control_valve_mode(shared_data["valve_mode"])  # Control the valve mode
     
-    if PROCESS_CONFIG['sample_time']:
-        time.sleep(PROCESS_CONFIG['sample_time'])
-    else:
-        time.sleep(60)  # Default sample time
-
+    # Perform the VNA sweep during the sampling process
+    logger.info("Starting VNA sweep...")
+    run_vna_sweep(concentration, chemical)  # Perform the VNA sweep
+    
+    # Once VNA sweep is completed, set the finish flag
     finish_flag.set()
-    logger.debug("Sampling process completed.")
+    logger.debug("Sampling process completed and VNA sweep finished.")

@@ -3,7 +3,7 @@ import time
 from valve import control_valve_mode  # Assuming control_valve_mode is in valve.py
 
 # Initialize logging
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 def test_control_valve_mode():

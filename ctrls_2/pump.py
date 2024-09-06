@@ -1,5 +1,4 @@
 import time
-from smbus2 import SMBus
 from config import PUMP_CONFIG
 
 def write_waveform_data(bus, voltage):
@@ -34,4 +33,5 @@ def run_sequence(bus, voltage):
         time.sleep(0.1)
 
 def stop_pump(bus):
-    write_waveform_data(bus, 0)
+    for _ in range(2):
+        write_waveform_data(bus, 0)
