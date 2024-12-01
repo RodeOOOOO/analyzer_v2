@@ -38,7 +38,7 @@ def homogenization_process(shared_data, flow_lock, finish_flag):
     finish_flag.set()
     logger.debug("Homogenization process completed.")
 
-def sample_process(shared_data, flow_lock, finish_flag, concentration, chemical):
+def sample_process(shared_data, flow_lock, finish_flag, concentration, chemical, experiment_number):
     """Perform the sampling process with VNA sweep."""
     with flow_lock:
         shared_data["target_flow"] = PROCESS_CONFIG['sample_rate']
@@ -49,7 +49,7 @@ def sample_process(shared_data, flow_lock, finish_flag, concentration, chemical)
     
     # Perform the VNA sweep during the sampling process
     logger.info("Starting VNA sweep...")
-    run_vna_sweep(concentration, chemical)  # Perform the VNA sweep
+    run_vna_sweep(chemical, concentration, experiment_number)  # Perform the VNA sweep
     
     # Once VNA sweep is completed, set the finish flag
     finish_flag.set()

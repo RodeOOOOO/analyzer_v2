@@ -3,7 +3,7 @@ import time
 import tkinter as tk
 import Jetson.GPIO as GPIO
 from flow_control import flow_control_thread, flow_lock
-from process import flush_process, homogenization_process, sample_process,flush_finish_flag, homogenization_finish_flag, sample_finish_flag
+from process import flush_process, homogenization_process, sample_process, flush_finish_flag, homogenization_finish_flag, sample_finish_flag
 from pump import stop_pump
 from config import PUMP_CONFIG, FLOW_CONFIG, PROCESS_CONFIG, shared_data
 from logger import setup_logger
@@ -11,11 +11,12 @@ import logging
 
 logger = setup_logger(__name__, level=logging.INFO)
 
+
 class ProcessGUI:
-    def __init__(self, root, concentration, chemical):
+    def __init__(self, root, chemical, concentration):
         self.root = root
-        self.concentration = concentration
         self.chemical = chemical
+        self.concentration = concentration
         self.root.title("Process Monitor")
 
         self.status_label = tk.Label(root, text="Process Status: Waiting...", font=('Helvetica', 16))
@@ -24,14 +25,13 @@ class ProcessGUI:
         self.timer_label = tk.Label(root, text="Elapsed Time: 00:00", font=('Arial', 16))
         self.timer_label.pack(pady=10)
 
-        # Timer related variables
+        self.start_button = tk.Button(root, text="Start Experiment Loop", font=('Arial', 14), command=self.start_experiment_loop)
+        self.start_button.pack(pady=20)
+
         self.start_time = 0
         self.is_timer_running = False
 
         self.root.protocol("WM_DELETE_WINDOW", self.on_close)
-
-        self.process_thread = threading.Thread(target=self.run_process_sequence)
-        self.process_thread.start()
 
     def update_status(self, message):
         """Update the process status on the GUI."""
@@ -56,10 +56,24 @@ class ProcessGUI:
             self.root.after(0, lambda: self.timer_label.config(text=f"Elapsed Time: {minutes:02}:{seconds:02}"))
             self.root.after(1000, self.update_timer)
 
-    def run_process_sequence(self):
+    def start_experiment_loop(self):
+        """Start the experiment loop to run the process sequence multiple times."""
+        try:
+            experiment_count = 10  # Number of experiments
+            for experiment_number in range(1, experiment_count + 1):
+                logger.info(f"Starting Experiment {experiment_number}...")
+                self.run_process_sequence(self.chemical, self.concentration, experiment_number)
+                logger.info(f"Completed Experiment {experiment_number}.")
+        except Exception as e:
+            logger.error(f"Error during experiment loop: {e}")
+
+    def run_process_sequence(self, chemical, concentration, experiment_number):
         """Runs the process sequence and updates the GUI."""
         try:
-            self.flow_thread = threading.Thread(target=flow_control_thread, args=(PUMP_CONFIG['pump_bus'], FLOW_CONFIG['flow_bus'], shared_data))
+            self.flow_thread = threading.Thread(
+                target=flow_control_thread,
+                args=(PUMP_CONFIG['pump_bus'], FLOW_CONFIG['flow_bus'], shared_data),
+            )
             self.flow_thread.start()
 
             # Flush process
@@ -75,9 +89,9 @@ class ProcessGUI:
             self.stop_timer()
 
             # Sample process
-            self.update_status(f"Starting sample process for {self.concentration}ppm {self.chemical}...")
+            self.update_status(f"Starting sample process: {chemical}, {concentration} ppm, Experiment {experiment_number}...")
             self.start_timer()
-            sample_process(shared_data, flow_lock, sample_finish_flag, self.concentration, self.chemical)
+            sample_process(shared_data, flow_lock, sample_finish_flag, concentration, chemical, experiment_number)
             self.stop_timer()
 
             # Final flush process
@@ -87,7 +101,7 @@ class ProcessGUI:
             self.stop_timer()
 
             shared_data["terminate"] = True
-            self.flow_thread.join()  # Wait for the thread to terminate
+            self.flow_thread.join()
 
             self.update_status("Turning off pump...")
             stop_pump(PUMP_CONFIG['pump_bus'])
@@ -110,7 +124,6 @@ class ProcessGUI:
 
         self.update_status("Process Status: Waiting...")
         self.root.after(0, lambda: self.timer_label.config(text="Elapsed Time: 00:00"))
-        self.root.after(0, self.close_gui)
 
     def close_gui(self):
         self.root.quit()
@@ -120,7 +133,7 @@ class ProcessGUI:
 
     def on_close(self):
         logger.info("Closing the application...")
-        if self.process_thread.is_alive():
+        if hasattr(self, 'process_thread') and self.process_thread.is_alive():
             logger.info("Terminating process thread...")
             shared_data["terminate"] = True
             self.process_thread.join(timeout=1)

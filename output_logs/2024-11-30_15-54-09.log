@@ -1,0 +1,88 @@
+2024-11-30 15:54:14,483 - DEBUG - flow_control - Flow control thread initialized.
+2024-11-30 15:54:14,483 - INFO - flow - Starting continuous measurement...
+2024-11-30 15:54:14,484 - INFO - flow_control - Flow measurement started successfully.
+2024-11-30 15:54:14,484 - DEBUG - valve - Controlling valve mode: flush_flow
+2024-11-30 15:54:14,485 - DEBUG - flow_control - Reading flow...
+2024-11-30 15:54:14,485 - DEBUG - valve - Switching to clean flow...
+2024-11-30 15:54:14,485 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): HIGH
+2024-11-30 15:54:14,485 - DEBUG - valve - Switched to flush flow
+2024-11-30 15:54:14,486 - DEBUG - flow - Raw sensor data: [13, 169, 181]
+2024-11-30 15:54:14,486 - DEBUG - flow_control - Current flow: 0.3497, Current voltage: 0
+2024-11-30 15:54:14,486 - DEBUG - valve - Controlling valve mode: flush_flow
+2024-11-30 15:54:14,486 - DEBUG - valve - Switching to clean flow...
+2024-11-30 15:54:14,486 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): HIGH
+2024-11-30 15:54:14,486 - DEBUG - valve - Switched to flush flow
+2024-11-30 15:54:14,486 - INFO - flow_control - Valve Mode: flush_flow, Target Flow Rate: 1.000 ml/min, Flow Rate: 0.350 ml/min, Voltage: 13.0 V, Adjustment: 13.0 V
+2024-11-30 15:54:15,487 - DEBUG - valve - Controlling valve mode: homogenization_flow
+2024-11-30 15:54:15,487 - DEBUG - valve - Switching to homogenization flow...
+2024-11-30 15:54:15,487 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): LOW
+2024-11-30 15:54:15,488 - DEBUG - valve - Switched to homogenization flow
+2024-11-30 15:54:15,993 - DEBUG - flow_control - Reading flow...
+2024-11-30 15:54:15,994 - DEBUG - flow - Raw sensor data: [0, 109, 118]
+2024-11-30 15:54:15,994 - DEBUG - flow_control - Current flow: 0.0109, Current voltage: 13.006
+2024-11-30 15:54:15,995 - DEBUG - valve - Controlling valve mode: homogenization_flow
+2024-11-30 15:54:15,995 - DEBUG - valve - Switching to homogenization flow...
+2024-11-30 15:54:15,995 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): LOW
+2024-11-30 15:54:15,995 - DEBUG - valve - Switched to homogenization flow
+2024-11-30 15:54:15,995 - INFO - flow_control - Valve Mode: homogenization_flow, Target Flow Rate: 1.000 ml/min, Flow Rate: 0.011 ml/min, Voltage: 32.8 V, Adjustment: 19.8 V
+2024-11-30 15:54:16,500 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 15:54:16,501 - DEBUG - valve - Switching to sample flow...
+2024-11-30 15:54:16,501 - DEBUG - valve - Valve 1 (Pin 1): HIGH, Valve 2 (Pin 2): LOW
+2024-11-30 15:54:16,501 - DEBUG - valve - Switched to sample flow
+2024-11-30 15:54:17,501 - DEBUG - flow_control - Reading flow...
+2024-11-30 15:54:17,502 - DEBUG - flow - Raw sensor data: [13, 254, 92]
+2024-11-30 15:54:17,502 - DEBUG - flow_control - Current flow: 0.3582, Current voltage: 32.788
+2024-11-30 15:54:17,502 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 15:54:17,502 - DEBUG - valve - Switching to sample flow...
+2024-11-30 15:54:17,502 - DEBUG - valve - Valve 1 (Pin 1): HIGH, Valve 2 (Pin 2): LOW
+2024-11-30 15:54:17,502 - DEBUG - valve - Switched to sample flow
+2024-11-30 15:54:17,502 - INFO - flow_control - Valve Mode: sample_flow, Target Flow Rate: 0.400 ml/min, Flow Rate: 0.358 ml/min, Voltage: 32.8 V, Adjustment: 0.0 V
+2024-11-30 15:54:19,008 - DEBUG - flow_control - Reading flow...
+2024-11-30 15:54:19,010 - DEBUG - flow - Raw sensor data: [13, 215, 82]
+2024-11-30 15:54:19,010 - DEBUG - flow_control - Current flow: 0.3543, Current voltage: 32.788
+2024-11-30 15:54:19,010 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 15:54:19,011 - DEBUG - valve - Switching to sample flow...
+2024-11-30 15:54:19,011 - ERROR - valve - Error controlling valve mode sample_flow: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD), GPIO.setmode(GPIO.BCM), GPIO.setmode(GPIO.TEGRA_SOC) or GPIO.setmode(GPIO.CVM)
+2024-11-30 15:54:19,011 - INFO - flow_control - Valve Mode: sample_flow, Target Flow Rate: 0.400 ml/min, Flow Rate: 0.354 ml/min, Voltage: 32.8 V, Adjustment: 0.0 V
+2024-11-30 15:54:20,518 - DEBUG - flow_control - Reading flow...
+2024-11-30 15:54:20,519 - DEBUG - flow - Raw sensor data: [13, 166, 155]
+2024-11-30 15:54:20,519 - DEBUG - flow_control - Current flow: 0.3494, Current voltage: 32.788
+2024-11-30 15:54:20,519 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 15:54:20,520 - DEBUG - valve - Switching to sample flow...
+2024-11-30 15:54:20,520 - ERROR - valve - Error controlling valve mode sample_flow: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD), GPIO.setmode(GPIO.BCM), GPIO.setmode(GPIO.TEGRA_SOC) or GPIO.setmode(GPIO.CVM)
+2024-11-30 15:54:20,520 - INFO - flow_control - Valve Mode: sample_flow, Target Flow Rate: 0.400 ml/min, Flow Rate: 0.349 ml/min, Voltage: 32.8 V, Adjustment: 0.0 V
+2024-11-30 15:54:22,026 - DEBUG - flow_control - Reading flow...
+2024-11-30 15:54:22,027 - DEBUG - flow - Raw sensor data: [13, 175, 19]
+2024-11-30 15:54:22,038 - DEBUG - flow_control - Current flow: 0.3503, Current voltage: 32.788
+2024-11-30 15:54:22,038 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 15:54:22,038 - DEBUG - valve - Switching to sample flow...
+2024-11-30 15:54:22,038 - ERROR - valve - Error controlling valve mode sample_flow: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD), GPIO.setmode(GPIO.BCM), GPIO.setmode(GPIO.TEGRA_SOC) or GPIO.setmode(GPIO.CVM)
+2024-11-30 15:54:22,038 - INFO - flow_control - Valve Mode: sample_flow, Target Flow Rate: 0.400 ml/min, Flow Rate: 0.350 ml/min, Voltage: 32.8 V, Adjustment: 0.0 V
+2024-11-30 15:54:23,544 - DEBUG - flow_control - Reading flow...
+2024-11-30 15:54:23,545 - DEBUG - flow - Raw sensor data: [13, 203, 108]
+2024-11-30 15:54:23,545 - DEBUG - flow_control - Current flow: 0.3531, Current voltage: 32.788
+2024-11-30 15:54:23,546 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 15:54:23,546 - DEBUG - valve - Switching to sample flow...
+2024-11-30 15:54:23,546 - ERROR - valve - Error controlling valve mode sample_flow: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD), GPIO.setmode(GPIO.BCM), GPIO.setmode(GPIO.TEGRA_SOC) or GPIO.setmode(GPIO.CVM)
+2024-11-30 15:54:23,546 - INFO - flow_control - Valve Mode: sample_flow, Target Flow Rate: 0.400 ml/min, Flow Rate: 0.353 ml/min, Voltage: 32.8 V, Adjustment: 0.0 V
+2024-11-30 15:54:25,052 - DEBUG - flow_control - Reading flow...
+2024-11-30 15:54:25,053 - DEBUG - flow - Raw sensor data: [13, 207, 168]
+2024-11-30 15:54:25,054 - DEBUG - flow_control - Current flow: 0.3535, Current voltage: 32.788
+2024-11-30 15:54:25,054 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 15:54:25,054 - DEBUG - valve - Switching to sample flow...
+2024-11-30 15:54:25,054 - ERROR - valve - Error controlling valve mode sample_flow: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD), GPIO.setmode(GPIO.BCM), GPIO.setmode(GPIO.TEGRA_SOC) or GPIO.setmode(GPIO.CVM)
+2024-11-30 15:54:25,054 - INFO - flow_control - Valve Mode: sample_flow, Target Flow Rate: 0.400 ml/min, Flow Rate: 0.353 ml/min, Voltage: 32.8 V, Adjustment: 0.0 V
+2024-11-30 15:54:26,560 - DEBUG - flow_control - Reading flow...
+2024-11-30 15:54:26,561 - DEBUG - flow - Raw sensor data: [13, 218, 30]
+2024-11-30 15:54:26,561 - DEBUG - flow_control - Current flow: 0.3546, Current voltage: 32.788
+2024-11-30 15:54:26,561 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 15:54:26,561 - DEBUG - valve - Switching to sample flow...
+2024-11-30 15:54:26,561 - ERROR - valve - Error controlling valve mode sample_flow: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD), GPIO.setmode(GPIO.BCM), GPIO.setmode(GPIO.TEGRA_SOC) or GPIO.setmode(GPIO.CVM)
+2024-11-30 15:54:26,562 - INFO - flow_control - Valve Mode: sample_flow, Target Flow Rate: 0.400 ml/min, Flow Rate: 0.355 ml/min, Voltage: 32.8 V, Adjustment: 0.0 V
+2024-11-30 15:54:28,067 - DEBUG - flow_control - Reading flow...
+2024-11-30 15:54:28,068 - DEBUG - flow - Raw sensor data: [13, 164, 249]
+2024-11-30 15:54:28,068 - DEBUG - flow_control - Current flow: 0.3492, Current voltage: 32.788
+2024-11-30 15:54:28,069 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 15:54:28,069 - DEBUG - valve - Switching to sample flow...
+2024-11-30 15:54:28,069 - ERROR - valve - Error controlling valve mode sample_flow: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD), GPIO.setmode(GPIO.BCM), GPIO.setmode(GPIO.TEGRA_SOC) or GPIO.setmode(GPIO.CVM)
+2024-11-30 15:54:28,069 - INFO - flow_control - Valve Mode: sample_flow, Target Flow Rate: 0.400 ml/min, Flow Rate: 0.349 ml/min, Voltage: 32.8 V, Adjustment: 0.0 V

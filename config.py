@@ -44,8 +44,8 @@ shared_data = {
     "terminate": False  # Flag to stop the flow control thread
 }
 VNA_CONFIG = {
-    'ifbw': 100,              # IF Bandwidth in Hz
-    'points': 10000,          # Number of points
+    'ifbw': 10000,              # IF Bandwidth in Hz --> 100
+    'points': 100,          # Number of points --> 10000
     'start_frequency': 0,     # Start frequency in Hz
     'stop_frequency': 6e9     # Stop frequency in Hz
 }

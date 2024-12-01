@@ -1,0 +1,52 @@
+2024-11-30 17:21:16,853 - DEBUG - flow_control - Flow control thread initialized.
+2024-11-30 17:21:16,854 - INFO - flow - Starting continuous measurement...
+2024-11-30 17:21:16,854 - INFO - flow_control - Flow measurement started successfully.
+2024-11-30 17:21:16,854 - DEBUG - flow_control - Reading flow...
+2024-11-30 17:21:16,855 - DEBUG - flow - Raw sensor data: [13, 203, 108]
+2024-11-30 17:21:16,856 - DEBUG - flow_control - Current flow: 0.3531, Current voltage: 0
+2024-11-30 17:21:16,856 - DEBUG - valve - Controlling valve mode: flush_flow
+2024-11-30 17:21:16,856 - DEBUG - valve - Controlling valve mode: flush_flow
+2024-11-30 17:21:16,856 - DEBUG - valve - Switching to clean flow...
+2024-11-30 17:21:16,856 - DEBUG - valve - Switching to clean flow...
+2024-11-30 17:21:16,857 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): HIGH
+2024-11-30 17:21:16,857 - DEBUG - valve - Switched to flush flow
+2024-11-30 17:21:16,857 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): HIGH
+2024-11-30 17:21:16,857 - DEBUG - valve - Switched to flush flow
+2024-11-30 17:21:16,857 - INFO - flow_control - Valve Mode: flush_flow, Target Flow Rate: 1.000 ml/min, Flow Rate: 0.353 ml/min, Voltage: 12.9 V, Adjustment: 12.9 V
+2024-11-30 17:21:17,859 - DEBUG - valve - Controlling valve mode: homogenization_flow
+2024-11-30 17:21:17,859 - DEBUG - valve - Switching to homogenization flow...
+2024-11-30 17:21:17,859 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): LOW
+2024-11-30 17:21:17,859 - DEBUG - valve - Switched to homogenization flow
+2024-11-30 17:21:18,364 - DEBUG - flow_control - Reading flow...
+2024-11-30 17:21:18,365 - DEBUG - flow - Raw sensor data: [0, 51, 23]
+2024-11-30 17:21:18,365 - DEBUG - flow_control - Current flow: 0.0051, Current voltage: 12.938
+2024-11-30 17:21:18,365 - DEBUG - valve - Controlling valve mode: homogenization_flow
+2024-11-30 17:21:18,365 - DEBUG - valve - Switching to homogenization flow...
+2024-11-30 17:21:18,365 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): LOW
+2024-11-30 17:21:18,365 - DEBUG - valve - Switched to homogenization flow
+2024-11-30 17:21:18,365 - INFO - flow_control - Valve Mode: homogenization_flow, Target Flow Rate: 1.000 ml/min, Flow Rate: 0.005 ml/min, Voltage: 32.8 V, Adjustment: 19.9 V
+2024-11-30 17:21:18,872 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 17:21:18,872 - DEBUG - valve - Switching to sample flow...
+2024-11-30 17:21:18,873 - DEBUG - valve - Valve 1 (Pin 1): HIGH, Valve 2 (Pin 2): LOW
+2024-11-30 17:21:18,873 - DEBUG - valve - Switched to sample flow
+2024-11-30 17:21:19,871 - DEBUG - flow_control - Reading flow...
+2024-11-30 17:21:19,873 - DEBUG - flow - Raw sensor data: [13, 227, 83]
+2024-11-30 17:21:19,873 - DEBUG - flow_control - Current flow: 0.3555, Current voltage: 32.836
+2024-11-30 17:21:19,873 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 17:21:19,873 - DEBUG - valve - Switching to sample flow...
+2024-11-30 17:21:19,874 - DEBUG - valve - Valve 1 (Pin 1): HIGH, Valve 2 (Pin 2): LOW
+2024-11-30 17:21:19,874 - DEBUG - valve - Switched to sample flow
+2024-11-30 17:21:19,874 - INFO - flow_control - Valve Mode: sample_flow, Target Flow Rate: 0.400 ml/min, Flow Rate: 0.355 ml/min, Voltage: 32.8 V, Adjustment: 0.0 V
+2024-11-30 17:21:21,382 - DEBUG - flow_control - Reading flow...
+2024-11-30 17:21:21,389 - DEBUG - flow - Raw sensor data: [13, 60, 121]
+2024-11-30 17:21:21,392 - DEBUG - flow_control - Current flow: 0.3388, Current voltage: 32.836
+2024-11-30 17:21:21,393 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 17:21:21,393 - DEBUG - valve - Switching to sample flow...
+2024-11-30 17:21:21,400 - DEBUG - valve - Valve 1 (Pin 1): HIGH, Valve 2 (Pin 2): LOW
+2024-11-30 17:21:21,400 - DEBUG - valve - Switched to sample flow
+2024-11-30 17:21:21,401 - INFO - flow_control - Valve Mode: sample_flow, Target Flow Rate: 0.400 ml/min, Flow Rate: 0.339 ml/min, Voltage: 32.8 V, Adjustment: 0.0 V
+2024-11-30 17:21:21,716 - DEBUG - valve - Controlling valve mode: flush_flow
+2024-11-30 17:21:21,716 - DEBUG - valve - Switching to clean flow...
+2024-11-30 17:21:21,716 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): HIGH
+2024-11-30 17:21:21,717 - DEBUG - valve - Switched to flush flow
+2024-11-30 17:21:22,943 - INFO - flow_control - Terminating flow control thread.

@@ -1,0 +1,48 @@
+2024-11-30 16:25:19,290 - DEBUG - flow_control - Flow control thread initialized.
+2024-11-30 16:25:19,290 - INFO - flow - Starting continuous measurement...
+2024-11-30 16:25:19,291 - INFO - flow_control - Flow measurement started successfully.
+2024-11-30 16:25:19,292 - DEBUG - flow_control - Reading flow...
+2024-11-30 16:25:19,293 - DEBUG - flow - Raw sensor data: [13, 196, 66]
+2024-11-30 16:25:19,293 - DEBUG - flow_control - Current flow: 0.3524, Current voltage: 0
+2024-11-30 16:25:19,293 - DEBUG - valve - Controlling valve mode: flush_flow
+2024-11-30 16:25:19,293 - DEBUG - valve - Switching to clean flow...
+2024-11-30 16:25:19,294 - DEBUG - valve - Controlling valve mode: flush_flow
+2024-11-30 16:25:19,294 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): HIGH
+2024-11-30 16:25:19,294 - DEBUG - valve - Switching to clean flow...
+2024-11-30 16:25:19,294 - DEBUG - valve - Switched to flush flow
+2024-11-30 16:25:19,295 - INFO - flow_control - Valve Mode: flush_flow, Target Flow Rate: 1.000 ml/min, Flow Rate: 0.352 ml/min, Voltage: 13.0 V, Adjustment: 13.0 V
+2024-11-30 16:25:19,295 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): HIGH
+2024-11-30 16:25:19,295 - DEBUG - valve - Switched to flush flow
+2024-11-30 16:25:20,296 - DEBUG - valve - Controlling valve mode: homogenization_flow
+2024-11-30 16:25:20,296 - DEBUG - valve - Switching to homogenization flow...
+2024-11-30 16:25:20,297 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): LOW
+2024-11-30 16:25:20,297 - DEBUG - valve - Switched to homogenization flow
+2024-11-30 16:25:20,802 - DEBUG - flow_control - Reading flow...
+2024-11-30 16:25:20,803 - DEBUG - flow - Raw sensor data: [0, 102, 156]
+2024-11-30 16:25:20,803 - DEBUG - flow_control - Current flow: 0.0102, Current voltage: 12.951999999999998
+2024-11-30 16:25:20,803 - DEBUG - valve - Controlling valve mode: homogenization_flow
+2024-11-30 16:25:20,803 - DEBUG - valve - Switching to homogenization flow...
+2024-11-30 16:25:20,804 - DEBUG - valve - Valve 1 (Pin 1): LOW, Valve 2 (Pin 2): LOW
+2024-11-30 16:25:20,804 - DEBUG - valve - Switched to homogenization flow
+2024-11-30 16:25:20,804 - INFO - flow_control - Valve Mode: homogenization_flow, Target Flow Rate: 1.000 ml/min, Flow Rate: 0.010 ml/min, Voltage: 32.7 V, Adjustment: 19.8 V
+2024-11-30 16:25:21,298 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 16:25:21,298 - DEBUG - valve - Switching to sample flow...
+2024-11-30 16:25:21,299 - DEBUG - valve - Valve 1 (Pin 1): HIGH, Valve 2 (Pin 2): LOW
+2024-11-30 16:25:21,299 - DEBUG - valve - Switched to sample flow
+2024-11-30 16:25:22,311 - DEBUG - flow_control - Reading flow...
+2024-11-30 16:25:22,312 - DEBUG - flow - Raw sensor data: [13, 220, 184]
+2024-11-30 16:25:22,324 - DEBUG - flow_control - Current flow: 0.3548, Current voltage: 32.748
+2024-11-30 16:25:22,324 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 16:25:22,324 - DEBUG - valve - Switching to sample flow...
+2024-11-30 16:25:22,324 - DEBUG - valve - Valve 1 (Pin 1): HIGH, Valve 2 (Pin 2): LOW
+2024-11-30 16:25:22,324 - DEBUG - valve - Switched to sample flow
+2024-11-30 16:25:22,324 - INFO - flow_control - Valve Mode: sample_flow, Target Flow Rate: 0.400 ml/min, Flow Rate: 0.355 ml/min, Voltage: 32.7 V, Adjustment: 0.0 V
+2024-11-30 16:25:23,837 - DEBUG - flow_control - Reading flow...
+2024-11-30 16:25:23,849 - DEBUG - flow - Raw sensor data: [12, 223, 31]
+2024-11-30 16:25:23,849 - DEBUG - flow_control - Current flow: 0.3295, Current voltage: 32.748
+2024-11-30 16:25:23,849 - DEBUG - valve - Controlling valve mode: sample_flow
+2024-11-30 16:25:23,849 - DEBUG - valve - Switching to sample flow...
+2024-11-30 16:25:23,861 - DEBUG - valve - Valve 1 (Pin 1): HIGH, Valve 2 (Pin 2): LOW
+2024-11-30 16:25:23,872 - DEBUG - valve - Switched to sample flow
+2024-11-30 16:25:23,883 - INFO - flow_control - Valve Mode: sample_flow, Target Flow Rate: 0.400 ml/min, Flow Rate: 0.330 ml/min, Voltage: 32.7 V, Adjustment: 0.0 V
+2024-11-30 16:25:25,951 - INFO - flow_control - Terminating flow control thread.
